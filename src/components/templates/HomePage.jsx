@@ -4,6 +4,8 @@ import { getCoinList } from "../../services/cryptoApi";
 import Paginations from "../modules/Pagination";
 import SearchBox from "../modules/SearchBox";
 import Chart from "../modules/Chart";
+import NavBar from "../modules/NavBar";
+import { useRef } from "react";
 
 function HomePage() {
   const [coins, setCoins] = useState([]);
@@ -27,11 +29,21 @@ function HomePage() {
     getData();
   }, [currentPage, currency]);
 
+  const ref = useRef(null);
+  const handleClick = () => {
+    ref.current?.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
-    <div className="">
+    <div ref={ref} className="px-4">
+      <NavBar />
       <SearchBox currency={currency} setCurrency={setCurrency} />
       <TableCoin coins={coins} isLoading={isLoading} setChart={setChart} />
-      <Paginations currentPage={currentPage} setCurrentPage={setCurrentPage} />
+      <Paginations
+        handleClick={handleClick}
+        currentPage={currentPage}
+        setCurrentPage={setCurrentPage}
+      />
       {!!chart && <Chart chart={chart} setChart={setChart} />}
     </div>
   );

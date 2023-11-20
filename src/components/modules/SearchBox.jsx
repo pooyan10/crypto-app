@@ -45,7 +45,7 @@ function SearchBox({ currency, setCurrency }) {
 
   return (
     <>
-      <div className="mt-20 flex items-center">
+      <div className="mt-5 flex items-center">
         <Input
           className="w-[30%] p-4"
           type="text"
