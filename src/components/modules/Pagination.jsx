@@ -12,7 +12,7 @@ export default function Paginations({
         className="w-fit"
         size="md"
         variant="flat"
-        color="secondary"
+        color="primary"
         onPress={() => setCurrentPage((prev) => (prev > 1 ? prev - 1 : prev))}
         onClick={handleClick}
       >
@@ -22,7 +22,7 @@ export default function Paginations({
         showShadow
         size="lg"
         total={10}
-        color="secondary"
+        color="primary"
         page={currentPage}
         onChange={setCurrentPage}
       />
@@ -30,7 +30,7 @@ export default function Paginations({
         className="w-fit"
         size="md"
         variant="flat"
-        color="secondary"
+        color="primary"
         onPress={() => setCurrentPage((prev) => (prev < 10 ? prev + 1 : prev))}
         onClick={handleClick}
       >

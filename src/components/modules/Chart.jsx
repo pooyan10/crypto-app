@@ -40,29 +40,17 @@ function Chart({ chart, setChart }) {
           onClick={typeHandler}
           className=" -mt-10 flex w-[60%] gap-14 pl-16"
         >
-          <button
-            className={`${
-              type === "prices" && "bg-blue-700 text-white"
-            } rounded-lg border-2 border-blue-700 bg-white/90 px-2 py-1 text-blue-700 `}
-          >
+          <button className=" rounded-lg border-2 border-blue-700 bg-white/90 px-2 py-1 text-blue-700 focus:bg-blue-600 focus:text-white">
             Prices
           </button>
-          <button
-            className={` ${
-              type === "market_caps" && "bg-blue-700 text-white"
-            } rounded-lg border-2 border-blue-700 bg-white/90 px-2 py-1 text-blue-700 `}
-          >
+          <button className="rounded-lg border-2 border-blue-700 bg-white/90 px-2 py-1 text-blue-700 focus:bg-blue-600 focus:text-white">
             Market Caps
           </button>
-          <button
-            className={` ${
-              type === "total_volumes" && "bg-blue-700 text-white"
-            } rounded-lg border-2 border-blue-700 bg-white/90 px-2 py-1 text-blue-700 `}
-          >
+          <button className="rounded-lg border-2 border-blue-700 bg-white/90 px-2 py-1 text-blue-700 focus:bg-blue-600 focus:text-white">
             Total Volumes
           </button>
         </div>
-        <div className=" mt-4 flex justify-around rounded-lg bg-white/90 py-2">
+        <div className=" mt-4 flex justify-around rounded-lg py-2">
           <div className="flex gap-2 ">
             <p className="font-extrabold text-blue-700">Prices:</p>
             <span className="">${chart.coin.current_price}</span>
