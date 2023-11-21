@@ -13,6 +13,11 @@ export default function App() {
     <Navbar shouldHideOnScroll className="rounded-b-lg pt-5 backdrop-blur-lg ">
       <NavbarBrand>
         <p className="text-xl font-bold text-inherit">PooCoin</p>
+        <img
+          src="https://t3.ftcdn.net/jpg/01/94/67/20/360_F_194672016_pf5HYgLlm6XlSwuL7JE4Pqvdq0RFqK7V.jpg"
+          alt="💰"
+          className="h-12 rounded-full "
+        />
       </NavbarBrand>
       <NavbarContent className="hidden gap-4 sm:flex" justify="center">
         <NavbarItem>
